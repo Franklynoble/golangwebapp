@@ -1,0 +1,12 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<!--- this would use Element to range over the data------>
+{{range $index, $element := .}}
+<li>{{$index}} - {{$element}}</li>
+{{end}}
+</body>
+</html>
