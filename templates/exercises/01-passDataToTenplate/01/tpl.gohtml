@@ -1,0 +1,25 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+
+{{range.}}
+    {{.AcaYear}}
+    {{.Fall.Term}}
+    {{range .Fall.Courses}}
+        {{.Number }} -{{.Name}}-{{.Units}}
+    {{end}}
+    {{/*         {{.Number}} - {{.Name}} - {{.Units}}*/}}
+    <!-- PUT YOUR CODE HERE TO SHOW THE DATA-->
+
+    {{.Spring.Term}}
+    {{range .Spring.Courses}}
+        {{.Number }} -{{.Name}}-{{.Units}}
+    {{end}}
+{{end}}
+
+</body>
+</html>

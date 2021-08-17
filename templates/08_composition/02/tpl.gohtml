@@ -1,0 +1,18 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+{{/*here we have the inner Type promotion, Name and age get's promoted to the outer type (type person), because these are of person Type*/}}
+<h1>{{ .Name}}</h1>
+
+<h2>{{.Age}}</h2>
+{{if .LicenseToKill}}
+    <h3>License To Kill</h3>
+{{else}}
+    <h4>Not licensed to kill</h4>
+{{end}}
+</body>
+</html>

@@ -1,0 +1,36 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+</head>
+<body>
+{{/*this would check if score1 is greater than score2, if these condition is
+ met, it would print the data inside the if statement else, it would throw it would discard it*/}}
+{{if gt .Score1 .Score2}}
+    Score1 > Score2
+
+{{end}}
+{{/*this would check if score1 is lss than score2, if these condition is
+ met, it would print the data inside the if statement else, it would throw it would discard it*/}}
+
+{{if lt .Score1 .Score2}}
+ SCORE1 < SCORE2
+{{end}}
+
+{{/*this would check if score1 is equal score2, if these condition is
+ met, it would print the data inside the if statement else, it would throw it would discard it*/}}
+{{if eq .Score1 .Score2}}
+   SCORE1 = SCORE2
+{{end}}
+
+{{/*this would check if score1 is less than 10, if these condition is
+ met, it would print the data inside the if statement else, it would throw it would discard it*/}}
+{{if lt .Score1 10}}
+    SCORE1 < 10
+{{end}}
+
+
+
+
+</body>
+</html>
