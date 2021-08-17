@@ -1,0 +1,35 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+</head>
+
+
+<body>
+{{/*Example ranging over the current Data, so the current piece of data would be the struct*/}}
+{{range .}}
+    {{.}}
+{{end}}
+
+
+{{/*example 2 using an if statement to test if there is a data*/}}
+{{if .}}
+    {{.}}
+{{end}}
+{{/*example 3 range over  the slice of user and checks if they have a name*/}}
+{{range .}}
+    {{if .Name}}
+        {{.Name}} <!---if name found , print the name -->
+    {{end}}
+{{end}}
+
+{{/*Example 4  this would check using the conditional and operator if the Name and admin has a value it would print what this all the details based on the condtion*/}}
+{{range .}}
+    {{if and .Name .Admin}}
+        {{.Name}}
+        {{.Motto}}
+        {{.Admin}}
+    {{end}}
+{{end}}
+</body>
+</html>
