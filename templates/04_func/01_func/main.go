@@ -12,8 +12,8 @@ var tpl *template.Template
  /*
  create a function to register a functions.
  "UC" is what the function will be called in the template
- "uc" is the ToUpper func from package strings
-  ft is a func i declared
+ "uc" is the ToUpper 04_func from package strings
+  ft is a 04_func i declared
   ft slices a string,returning the first three characters
   */
  var fm = template.FuncMap{

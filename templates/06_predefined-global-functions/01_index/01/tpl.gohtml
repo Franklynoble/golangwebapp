@@ -1,0 +1,22 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+{{index . 2}}
+{{index . 1}}
+{{index . 0}}
+
+{{/*function you can use in template is said to be a predefined global function*/}}
+
+{{/*index returns the result of indexing its first argument by the following arguments. thus "index 123" is, in go syntax,*/}}
+{{/*x[1][2][3]. each indexed item must be a map, slice or array*/}}
+
+   <!---FYI----->
+ this is go template comment
+{{/*(index .wisdom 3).Name*/}}
+
+</body>
+</html>

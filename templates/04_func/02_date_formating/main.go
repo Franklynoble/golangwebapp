@@ -19,11 +19,11 @@ func main() {
 
 	}
 }
-//this func get the value of type time
+//this 04_func get the value of type time
 func monthDayYear(t time.Time)string {
 	return t.Format("01-02-2006") // the format method called on value type time
 }
  // use the template to get the funcMap to call the function
-var fm = template.FuncMap{  // pass the method on func map
+var fm = template.FuncMap{  // pass the method on 04_func map
 	      "fdateMDY":monthDayYear,  // the method is the value of Key "   "fdateMDY"
 }
