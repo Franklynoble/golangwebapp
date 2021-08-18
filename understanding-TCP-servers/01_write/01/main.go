@@ -21,6 +21,7 @@ func main() {
  	  if err != nil {
  	  	   log.Println(err)
  	  	    }
+ 	  	     //write to a connection and return the connection
  	  	    io.WriteString(conn,"\n Hello from TCP server\n")
  	       fmt.Fprint(conn,"How is Your Day?")
  	 fmt.Fprintf(conn, "%v","Well, i gop!")
