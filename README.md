@@ -4,7 +4,7 @@ HTTP uses TCP.
 To create a server that works with HTTP, we just create a TCP server.
 
 To configure our code to handle request/response in an HTTP fashion which works with browsers, we need to adhere to HTTP standards.
-
+```
 HTTP/1.1 message
 An HTTP message is made up of the following:
 
@@ -14,7 +14,7 @@ an empty line indicating the end of the header section
 an optional message body.
 Request line (request)
 GET / HTTP/1.1
-
+```
 method SP request-target SP HTTP-version CRLF
 
 Status line (response)
@@ -23,6 +23,7 @@ HTTP/1.1 302 Found
 HTTP-version SP status-code SP reason-phrase CRLF
 
 Writing a response
+```
 body := "CHECK OUT THE RESPONSE BODY PAYLOAD"
 io.WriteString(conn, "HTTP/1.1 200 OK\r\n") 			// status line
 fmt.Fprintf(conn, "Content-Length: %d\r\n", len(body)) 	// header
@@ -34,3 +35,4 @@ Parsing String
 strings.Fields
 
 func Fields(s string) []string
+```
