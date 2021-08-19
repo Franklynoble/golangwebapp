@@ -49,6 +49,7 @@ Patterns may optionally begin with a host name, restricting matches to URLs on t
 ServeMux also takes care of sanitizing the URL request path, redirecting any request containing . or .. elements or repeated slashes to an equivalent, cleaner URL.
 
 ServeMux
+```
 http.ServeMux
 
 type ServeMux
@@ -57,15 +58,18 @@ type ServeMux
 	func (mux *ServeMux) HandleFunc(pattern string, handler func(ResponseWriter, *Request))
 	func (mux *ServeMux) Handler(r *Request) (h Handler, pattern string)
 	func (mux *ServeMux) ServeHTTP(w ResponseWriter, r *Request)
+	```
 Any value of type *http.ServeMux implements the http.Handler interface.
 
 Remember, the http.Handler interface requires that a type have the ServeHTTP method.
-
+```
 type Handler interface {
     ServeHTTP(ResponseWriter, *Request)
 }
+```
 What this tells us is that we can pass a value of type *http.ServeMux into http.ListenAndServe
 
+```
 func ListenAndServe(addr string, handler Handler) error
 You can also see from the documentation of *http.ServeMux ...
 
@@ -82,11 +86,13 @@ We can use Handle like this:
 	mux := http.NewServeMux()
 	mux.Handle("/", h)
 	mux.Handle("/cat", c)
+	```
 The overall game plan:
 
 We will create a NewServeMux, then attach the method Handle to it to set routes, then pass our *http.ServeMux to http.ListenAndServe.
 
 DefaultServeMux
 ListenAndServe starts an HTTP server with a given address and handler. The handler is usually nil, which means to use DefaultServeMux. Handle and HandleFunc add handlers to DefaultServeMux:
-
+```
 http.ListenAndServe(":8080", nil)
+```
