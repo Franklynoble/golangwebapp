@@ -9,24 +9,23 @@ import (
 
 type hotdog int
 
-
-
 func (d hotdog) ServeHTTP(w http.ResponseWriter, req *http.Request) {
 	err := req.ParseForm()
-		if err != nil {
-			log.Println(err)
+	if err != nil {
+		log.Println(err)
 	}
 	data := struct {
-		Method  string
+		Method      string
+		URL         *url.URL
 		Submissions url.Values
 	}{
 		Method:      req.Method,
+		URL:         req.URL,
 		Submissions: req.Form,
 	}
-	tpl.ExecuteTemplate(w,"index.gohtml",data)
+	tpl.ExecuteTemplate(w, "index.gohtml", data)
 
 }
-
 
 var tpl *template.Template
 
@@ -37,6 +36,6 @@ func main() {
 
 	var d hotdog
 
-	http.ListenAndServe(":8080",d)
+	http.ListenAndServe(":8080", d)
 
 }
