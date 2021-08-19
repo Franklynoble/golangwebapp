@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+{{/*if there is Data, show this code*/}}
+{{if .}}
+<main>
+      <p> <strong>Variable Names</strong> (identifiers) and <em>values</em>:</p>
+     {{range $key, $value := .}}  <!---range over the Map--->
+    <p><strong>{{$key}}</strong> </p>
+{{/*         range over the values which is a slice of strings, and print it{{.}}}*/}}
+    <ul>{{range $value}} <li> <em>{{.}} </em></li>{{end}}</ul>
+{{end}}
+</main>
+    {{end}}
+
+{{/* always, we will show this form*/}}
+<form action="/" method="post">
+  <input type="text" name="fname" placeholder="fname"autofocus autocomplete="off" >
+  <input type="submit" name="submit-btn" value="onda button" >
+
+</form>
+
+</body>
+</html>
