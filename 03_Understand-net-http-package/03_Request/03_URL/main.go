@@ -11,7 +11,7 @@ type hotdog int
 
 var tpl *template.Template
 
-func init() {
+func init() { 
 	tpl = template.Must(template.ParseFiles("index.gohtml"))
 }
 

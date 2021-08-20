@@ -187,8 +187,8 @@ func (h Header) Add(key, value string)
 func (h Header) Del(key string)
 func (h Header) Get(key string) string
 func (h Header) Set(key, value string)
-func (h Header) Write(w io.Writer) error
-func (h Header) WriteSubset(w io.Writer, exclude map[string]bool) error
+func (h Header) Write(wr io.Writer) error
+func (h Header) WriteSubset(wr io.Writer, exclude map[string]bool) error
 ```
 
 We can set headers for a response like this:

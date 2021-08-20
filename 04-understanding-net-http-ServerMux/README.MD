@@ -58,7 +58,7 @@ type ServeMux
 	func (mux *ServeMux) Handle(pattern string, handler Handler)
 	func (mux *ServeMux) HandleFunc(pattern string, handler func(ResponseWriter, *Request))
 	func (mux *ServeMux) Handler(r *Request) (h Handler, pattern string)
-	func (mux *ServeMux) ServeHTTP(w ResponseWriter, r *Request)
+	func (mux *ServeMux) ServeHTTP(wr ResponseWriter, r *Request)
 Any value of type *http.ServeMux implements the http.Handler interface.
 
 Remember, the http.Handler interface requires that a type have the ServeHTTP method.
@@ -77,7 +77,7 @@ type ServeMux
 	func (mux *ServeMux) Handle(pattern string, handler Handler)
 	func (mux *ServeMux) HandleFunc(pattern string, handler func(ResponseWriter, *Request))
 	func (mux *ServeMux) Handler(r *Request) (h Handler, pattern string)
-	func (mux *ServeMux) ServeHTTP(w ResponseWriter, r *Request)
+	func (mux *ServeMux) ServeHTTP(wr ResponseWriter, r *Request)
 ```
 ... that we have a method Handle attached the the value of type *http.ServeMux. You can see that Handle takes a pattern and a http.Handler.
 
