@@ -29,7 +29,8 @@ Requests:
  /blog/go/request-routers/comments   no match
 Catch-all path parameters
 Catch-all parameters match anything until the path end, including the
-directory index (the '/' before the catch-all). Since they match anything until the end, catch-all parameters must always be the final path element.
+directory index (the '/' before the catch-all). Since they match anything until the end,
+catch-all parameters must always be the final path element.
 
 func main() {
     router := httprouter.New()
