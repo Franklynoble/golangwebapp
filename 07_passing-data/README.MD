@@ -1,27 +1,27 @@
-Passing values
-Form submission
+**Passing values**
+
+**Form submission**
+
 We can pass values from the client to the server through the URL or through the body of the request.
 
 When you submit a form, you can use either the "POST" or "GET" method. The "POST" method sends the form submission through the body of the request. The "GET" method for a form submission sends the form submission values through the url.
 
 I remember this like this:
-
+```
 post
 body
 
 get
 url
+```
+
 Post has four letters and so does form.
 
 Get has three letters and so does url.
 
-URL values
+
+**URL values**
 You can always append values to a URL.
-
-
-
-
-
 Anything after the ? is the query string - the area where values are stored.
 
 anatomy of a URL
