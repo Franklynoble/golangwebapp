@@ -1,0 +1,7 @@
+if trying to import a thirdParty package in go, first of all add a go module, using this syntax
+
+
+step 1. go mod init github.com/Franlky01/anypackageName
+step 2. on your IDE, on the search bar, type enble go module, checkMark the box to enable go module,
+then you sorted using golang Module
+step3. you can now important any thirdParty library
