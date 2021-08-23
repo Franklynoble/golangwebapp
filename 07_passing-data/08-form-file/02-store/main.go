@@ -5,6 +5,8 @@ import (
 	"html/template"
 	"io/ioutil"
 	"net/http"
+	"os"
+	"path/filepath"
 )
 
 
@@ -34,17 +36,32 @@ func foo(w http.ResponseWriter, req *http.Request) {
 			http.Error(w, err.Error(), http.StatusInternalServerError)
 			return
 		}
+
 		defer f.Close()
 		// for your information
 		fmt.Println("\nfile:", f, "\nheader:", h, "\nerr", err)
 
-		//read
 		bs, err := ioutil.ReadAll(f)
+		if err != nil {
+			http.Error(w,err.Error(),http.StatusInternalServerError)
+			return
+		}
+		s = string(bs)
+
+
+		//store on server
+		//location on where file to be saved create the filename
+		dst, err := os.Create(filepath.Join("./Users/",h.Filename))
 		if err != nil {
 			http.Error(w, err.Error(), http.StatusInternalServerError)
 			return
 		}
-		s = string(bs)
+		defer dst.Close()
+
+		_, err = dst.Write(bs)
+		if err != nil {
+			http.Error(w,err.Error(), http.StatusInternalServerError)
+		}
 
 	}
 	w.Header().Set("Content-Type","text/html; charset=utf-8")

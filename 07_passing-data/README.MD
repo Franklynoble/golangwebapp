@@ -7,13 +7,13 @@ We can pass values from the client to the server through the URL or through the 
 When you submit a form, you can use either the "POST" or "GET" method. The "POST" method sends the form submission through the body of the request. The "GET" method for a form submission sends the form submission values through the url.
 
 I remember this like this:
-```
+
 post
 body
 
 get
 url
-```
+
 
 Post has four letters and so does form.
 

@@ -1,0 +1,31 @@
+{{template "header"}}
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+<form method="POST">
+    <label for="firstName"> First Name: </label>
+    <input type="text" name="first" id="firstName">
+    <br>
+    <label for="lastName">Last Name</label>
+    <br>
+    <input type="text" id="lastName" name="last">
+    <br>
+    <label for="Subscribe">Subscribe</label>
+    <br>
+    <input type="checkbox" id="sub" name="subscribe">
+    <br>
+    <input type="submit">
+
+    <h1>: First: {{.FirstName}}</h1>
+    <h1>: Last: {{.LastName}}</h1>
+    <h1>: Subscribe: {{.Subscribed}}</h1>
+
+</form>
+
+
+{{template "footer"}}
