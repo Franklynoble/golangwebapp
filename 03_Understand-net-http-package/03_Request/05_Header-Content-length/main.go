@@ -31,13 +31,13 @@ func (m hotdog) ServeHTTP(w http.ResponseWriter, req *http.Request) {
 		req.ContentLength,
 	}
 
-	tpl.ExecuteTemplate(w, "index.gohtml", data)
+	tpl.ExecuteTemplate(w, "index.html.gohtml", data)
 }
 
 var tpl *template.Template
 
 func init() {
-	tpl = template.Must(template.ParseFiles("index.gohtml"))
+	tpl = template.Must(template.ParseFiles("index.html.gohtml"))
 }
 
 func main() {

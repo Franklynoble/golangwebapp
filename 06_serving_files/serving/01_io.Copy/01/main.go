@@ -18,6 +18,7 @@ func dog(wr http.ResponseWriter, req *http.Request) {
   io.WriteString(wr,`<img src="toby.jpg">`)
 }
 
+
 func dogPic(wr http.ResponseWriter, req *http.Request) {
 	f, err := os.Open("toby.jpg")
 	if err != nil {

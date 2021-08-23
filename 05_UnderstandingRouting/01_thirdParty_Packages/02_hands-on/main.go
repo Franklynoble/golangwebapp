@@ -28,7 +28,7 @@ func me(wr http.ResponseWriter, req *http.Request) {
 }
 
 func index(wr http.ResponseWriter, req *http.Request) {
-	err := tpl.ExecuteTemplate(wr, "index.gohtml", nil)
+	err := tpl.ExecuteTemplate(wr, "index.html.gohtml", nil)
 	if err != nil {
 		log.Fatal(err)
 	}

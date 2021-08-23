@@ -44,7 +44,7 @@ func blogWrite(w http.ResponseWriter, req *http.Request, ps httprouter.Params) {
 }
 
 func index(w http.ResponseWriter, req *http.Request, _ httprouter.Params) {
-	err := tpl.ExecuteTemplate(w, "index.gohtml", nil)
+	err := tpl.ExecuteTemplate(w, "index.html.gohtml", nil)
 	HandleError(w, err)
 }
 
