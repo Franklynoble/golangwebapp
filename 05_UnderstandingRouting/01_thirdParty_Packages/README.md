@@ -14,7 +14,8 @@ func main() {
     http.ListenAndServe(":8080", router)
 }
 Named path parameters
-The registered path, against which the router matches incoming requests, can also contain parameters. Parameters are dynamic path segments. They match anything until the next '/' or the path end.
+The registered path, against which the router matches incoming requests, can also contain 
+parameters. Parameters are dynamic path segments. They match anything until the next '/' or the path end.
 
 func main() {
     router := httprouter.New()
@@ -27,7 +28,9 @@ Requests:
  /blog/go/                           no match
  /blog/go/request-routers/comments   no match
 Catch-all path parameters
-Catch-all parameters match anything until the path end, including the directory index (the '/' before the catch-all). Since they match anything until the end, catch-all parameters must always be the final path element.
+Catch-all parameters match anything until the path end, including the
+directory index (the '/' before the catch-all). Since they match anything until the end,
+catch-all parameters must always be the final path element.
 
 func main() {
     router := httprouter.New()
