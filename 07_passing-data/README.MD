@@ -26,7 +26,7 @@ Anything after the ? is the query string - the area where values are stored.
 
 anatomy of a URL
 
- !["URL"]("URL.PNG")
+ !["URL"](../07_passing-data/URL.PNG)
 
 The values are stord in a identifier=value fashion.
 
