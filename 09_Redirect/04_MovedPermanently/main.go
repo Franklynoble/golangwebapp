@@ -5,7 +5,7 @@ import (
 	"net/http"
 )
 
-func main() {
+func main() {  
 	http.HandleFunc("/", foo)
 	http.HandleFunc("/bar", bar)
 	http.Handle("/favicon.ico", http.NotFoundHandler())
