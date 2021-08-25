@@ -12,6 +12,7 @@ type person struct {
 	Subscribed bool
 }
 
+
 var tpl *template.Template
 
 func init() {

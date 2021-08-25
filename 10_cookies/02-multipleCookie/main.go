@@ -21,7 +21,7 @@ func set(wr http.ResponseWriter, req *http.Request) {
 		Path:  "/",
 	})
 	fmt.Fprintln(wr, "COOKIE WRITTEN - CHECK YOUR BROWSER")
-	fmt.Fprint(wr, "in chrome go to dev tool/ application / cookies")
+	fmt.Fprint(wr, "in chrome go to dev tool/ application / 10_cookies")
 }
 func read(wr http.ResponseWriter, req *http.Request) {
 	c1, err := req.Cookie("my-cookie")
@@ -61,5 +61,5 @@ func abundance(wr http.ResponseWriter , req *http.Request) {
 
 	  })
 	  fmt.Fprintln(wr, "COOKIES WRITTEN - CHECK YOUR BROWSER")
-      fmt.Fprintln(wr,"IN CHROME GO TO: dev tools / application / cookies")
+      fmt.Fprintln(wr,"IN CHROME GO TO: dev tools / application / 10_cookies")
 }

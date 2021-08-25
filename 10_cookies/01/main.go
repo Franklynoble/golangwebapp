@@ -19,7 +19,7 @@ func set(w http.ResponseWriter, req *http.Request) {
 		Value: "some valueeee",
 	})
 	fmt.Fprintln(w, "COOKIE WRITTEN - CHECK YOUR BROWSER")
-	fmt.Fprintln(w,"in chrome go to: dev tools / application /cookies")
+	fmt.Fprintln(w,"in chrome go to: dev tools / application /10_cookies")
 }
 
 //read, would check to see if there is cookie, if yes it would read,

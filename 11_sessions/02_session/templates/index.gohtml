@@ -1,0 +1,23 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<form method="post">
+    <input type="email" name="username" placeholder="email"><br>
+    <input type="text" name="firstname" placeholder="first name"><br>
+    <input type="text" name="lastname" placeholder="last name"> <br>
+    <input type="submit">
+</form>
+
+{{if .First}}
+    USER NAME {{.UserName}}
+    First {{.First}} <br>
+    Last {{.Last}}
+{{end}}
+
+<br><br>
+<h2>Go to <a href="/bar" >The bar </a></h2>
+</body>
+</html>
