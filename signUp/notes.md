@@ -8,6 +8,15 @@ Now that you have two go files, you cannot use "go run main.go" to get your appl
 to run. That is only asking for one go file: main.go. You need to use either "go build"
 and then run the executable, or "go run *.go"
 
+Also Note that on windows, open the directory where all the main.go is located and type the following command in order,  this worked for me
+go build
+/filename.exe 
+hit enter
+
+NOTE; when the build is done, it would create an executable file on with .exe extension
+ run the file with the .exe 
+
+
 WebStorm Users
 Note to WebStorm users: when you create a new go page that has code 
 in package main, webstorm will highlight an error "multiplate packages in directory"; this
